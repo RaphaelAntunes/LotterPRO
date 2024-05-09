@@ -23,7 +23,7 @@
     <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-/>    <link rel="shortcut icon" href="{{ App\Helper\Configs::getConfigLogo() }}">
+/>    <link rel="shortcut icon" href="">
     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.13.1/cdn/shoelace.js"></script>
 
 
@@ -55,7 +55,8 @@
 
 
 
-    }
+    }   
+    
         body.impersonating{
             padding-top:44px;
         }
@@ -100,8 +101,48 @@
 <div class="wrapper">
 
     @include('admin.layouts.navbar')
-    @include('admin.layouts.sidebar', ['layout_button' => App\Models\Layout_Button::all()])
-
+    @include('admin.layouts.sidebar')
+    <div class="controle-flutuante d-lg-none d-flex">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <a class="" data-widget="pushmenu" href="#" role="  "> <svg viewBox="0 0 24 24" width="24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path d="M4 6H20M4 12H20M4 18H20" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </g>
+                </svg>
+            </a>
+            <h1>Menu</h1>
+        </div>
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                <img width="24" src="{{ asset('/admin/images/painel/clover.svg')}}" alt="">
+                <h1>Jogos</h1>
+            </a>
+        </div>
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <a href="/bets" class="d-flex flex-column justify-content-center align-items-center">
+                <img width="24" src="{{ asset('/admin/images/painel/bets.svg')}}" alt="">
+                <h1>Apostas</h1>
+            </a>
+        </div>
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <a href="" class="d-flex flex-column justify-content-center align-items-center">
+                <img width="24" src="{{ asset('/admin/images/painel/financial.svg')}}" alt="">
+                <h1>Financeiro</h1>
+            </a>
+        </div>
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <a href="/directss" class="d-flex flex-column justify-content-center align-items-center">
+                <img width="24" src="{{ asset('/admin/images/painel/direct.svg')}}" alt="">
+                <h1>Directs</h1>
+            </a>
+        </div>
+    
+    
+    </div>
     <div class="content-wrapper">
         <div class="container-fluid pt-3" style="padding-top:70px !important">
 

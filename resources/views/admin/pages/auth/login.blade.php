@@ -21,7 +21,7 @@
             @endif
             <div class="login-logo mt-md-5">
 
-                <img src="{{ App\Helper\Configs::getConfigLogo() }}" alt="" width="150" height="150">
+                <img src="" alt="" width="150" height="150">
 
             </div>
             <div class="col-md-12 px-4">
@@ -47,7 +47,7 @@
                 </div>
                 @enderror
             </div>
-            <h3 class="login-box-msg" style="color:#A3D712">Entre para continuar</h3>
+            <h3 class="login-box-msg" style="color:#ffe400">Entre para continuar</h3>
 
             <form method="POST" action="{{route('admin.post.login')}}">
                 @csrf
@@ -95,7 +95,7 @@
             </form>
 
             <div class="d-flex justify-content-center align-items-center p-2 login">
-               <a href="{{ route('forget.password.get') }}" class="btn btn-block btn-success login">{{ trans('admin.forgot-password-link') }}</a>
+               <a href="" class="btn btn-block btn-success login">{{ trans('admin.forgot-password-link') }}</a>
             </div>
             <div class="row">
                 <div class="col-sm-12">
@@ -106,7 +106,7 @@
 </button>
                     </p>
 
-                    <a href="https://wa.me/558196826967?text=Olá, poderia me ajudar?" class="btn btn-block btn-success login"
+                    <a href="" class="btn btn-block btn-success login"
                         title="Precisa de ajuda?" target="_blank">
                         <i style="border:none;" class="fa fa-whatsapp"></i> {{ trans('admin.pagesF.precisaAjuda') }}
                     </a>

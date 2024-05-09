@@ -1,13 +1,12 @@
 <nav class="main-header navbar navbar-expand">
+    <div class="d-flex container ">
     <!-- Logo -->
     <!-- Hamburguer -->
     <div class="d-flex align-items-center justify-content-center">
-        <div class="nav-item d-lg-none hamburguer">
-            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-        </div>
+     
         <div>
-            <a href="/" class="brand-link">
-                <img src="{{ App\Helper\Configs::getConfigLogo() }}" style="max-width: 50px;" alt="Logo"
+            <a href="/" class="">
+                <img src="{{ asset('/admin/images/painel/logoicon.png')}}" style="max-width: 157px; padding:6px;" alt="Logo"
                     class="brand-image img-circle " style="opacity: .8">
                 <span class="brand-text font-weight-light text-logo" style="font-size: 15px">{{
                     env("nome_sistema")}}</span>
@@ -33,8 +32,7 @@
         <!-- BTN SALDO -->
         <li class="nav-item dropdown mr-2 ml-2 ml-md-3 mr-md-3">
             <a href="#" data-toggle="dropdown" type="button" class="btn btn-money">
-                R${{\App\Helper\Money::toReal(auth()->user()->balance + auth()->user()->bonus +
-                auth()->user()->available_withdraw)}}
+                R$0
             </a>
             <!--Drop Saldo -->
             <ul class="dropdown-menu dropdown-menu-md dropdown-menu-right drop-saldo">
@@ -44,7 +42,7 @@
                             <svg data-v-7515e7cb="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                                 style="width:40px;">
 
-                                <path fill="#a3d712"
+                                <path fill="#ffe400"
                                     d="M256 272c39.77 0 72-32.24 72-72S295.8 128 256 128C216.2 128 184 160.2 184 200S216.2 272 256 272zM288 320H224c-47.54 0-87.54 29.88-103.7 71.71C155.1 426.5 203.1 448 256 448s100.9-21.53 135.7-56.29C375.5 349.9 335.5 320 288 320z"
                                     class="primary"></path>
                                 <path
@@ -53,8 +51,8 @@
                             </svg>
                         </div>
                         <div class="text-money">
-                            <h1>{{auth()->user()->name}} {{auth()->user()->last_name}}</h1>
-                            <p>{{auth()->user()->email}}</p>
+                            <h1>name</h1>
+                            <p>email</p>
                         </div>
                         <div class="ml-5">
                             <a href="{{route('admin.dashboards.wallet.index')}}"><i
@@ -66,22 +64,21 @@
                     <div class="mb-3">
                         <div class="mb-3">
                             <h1>{{ trans('admin.pagesF.saldo') }}</h1>
-                            <p>R${{\App\Helper\Money::toReal(auth()->user()->balance)}}</p>
+                            <p>R$0</p>
                         </div>
                         <div>
                             <h1>{{ trans('admin.pagesF.saqueDisponivel') }}</h1>
-                            <p> R${{\App\Helper\Money::toReal(auth()->user()->available_withdraw)}}</p>
+                            <p> R$0</p>
                         </div>
                     </div>
                     <div class="mb-3">
                         <div class="mb-3">
                             <h1>{{ trans('admin.pagesF.bonus') }}</h1>
-                            <p>R${{\App\Helper\Money::toReal(auth()->user()->bonus)}}</p>
+                            <p>R$0</p>
                         </div>
                         <div>
                             <h1>Saldo Total</h1>
-                            <p>R$ {{ \App\Helper\Money::toReal(auth()->user()->balance + auth()->user()->bonus +
-                                auth()->user()->available_withdraw) }}</p>
+                            <p>R$0</p>
                         </div>
                     </div>
                 </div>
@@ -89,7 +86,7 @@
         </li>
         <li>
         <a href="{{route('admin.dashboards.wallet.index')}}"> <button class="btn btn-secondary mr-md-3 mr-2 d-flex justify-content-center align-items-center ">
-                <i style="color:#a3d712" class=" fas fa-wallet wallet-nav"></i>
+                <i style="color:#ffe400" class=" fas fa-wallet wallet-nav"></i>
             </button>
         </a></li>
         <!-- Config -->
@@ -100,7 +97,7 @@
                     <svg data-v-7515e7cb="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                         style="width:20px;">
 
-                        <path fill="#a3d712"
+                        <path fill="#ffe400"
                             d="M256 272c39.77 0 72-32.24 72-72S295.8 128 256 128C216.2 128 184 160.2 184 200S216.2 272 256 272zM288 320H224c-47.54 0-87.54 29.88-103.7 71.71C155.1 426.5 203.1 448 256 448s100.9-21.53 135.7-56.29C375.5 349.9 335.5 320 288 320z"
                             class="primary"></path>
 
@@ -130,19 +127,17 @@
                 <!-- Linguagem -->
                 <a class="dropdown-item" data-toggle="dropdown" style="cursor:pointer;">
                     <i class="fas fa-globe-americas mr-2"></i>
-                    Tradução: {{ App\Helper\Lang::getCurrentUserLangLabel() }}
+                    Tradução: PTBR
                 </a>
-                @php $availableLangs = App\Helper\Lang::getAvailableLangs() @endphp
                 <ul class="dropdown-menu dropdown-menu-md dropdown-menu-right">
-                    @if(is_array($availableLangs) && $availableLangs > 0)
-                    @foreach($availableLangs as $key => $label)
+                  
                     <li style="padding: 5px 10px;">
-                        <a href="{{ route('admin.changeLocale', $key) }}" style="color: #fff; display: block"
-                            class="dropdown-item">{{ $label
-                            }}</a>
+                        <a href="" style="color: #fff; display: block"
+                            class="dropdown-item">Ingles</a>
+                            <a href="" style="color: #fff; display: block"
+                            class="dropdown-item">Espanhol  </a>
                     </li>
-                    @endforeach
-                    @endif
+                   
                 </ul>
 
                 <!-- logout -->
@@ -154,13 +149,11 @@
         </li>
 
         <!-- Notificação -->
-        @php $unreadNotifications = auth()->user()->unreadNotifications; @endphp
-        @if(!empty(auth()->user()->notifications) && count(auth()->user()->notifications) > 0)
         <li class="ml-2 ml-md-3">
             <button aria-haspopup="menu" data-toggle="dropdown" aria-expanded="false" type="button"
                 class="btn dropdown-toggle btn-secondary d-flex justify-content-center align-items-center btn-config icon-size-sm ">
                 <div>
-                    <svg style="fill: #a3d712;background: black;border-radius: 110px;color: #a3d712; padding:3px;"
+                    <svg style="fill: #ffe400;background: black;border-radius: 110px;color: #ffe400; padding:3px;"
                         width="22" height="22" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -174,33 +167,27 @@
                             stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
 
-                    @if($unreadNotifications->count() > 0)
-                    <div class="notifications-count">{{ $unreadNotifications->count() }}</div>
-                    @endif
+                    <div class="notifications-count">1</div>
                 </div>
             </button>
             <div class="dropdown-menu dropdown-menu-right">
                 <div id="DZ_W_Notification1" class="widget-media dz-scroll p-3" style="height:380px; overflow-y: auto">
                     <ul class="timeline">
-                        @foreach(auth()->user()->notifications as $notification)
                         <li>
-                            <a @if($notification->data['url']) href="{{$notification->data['url']}}" @else
-                                href="javascript:;" @endif>
+                            <a href="" >
                                 <div class="timeline-panel">
                                     <div class="media-body">
-                                        <h6 class="mb-1">{{$notification->data['title']}}</h6>
-                                        <small class="d-block">{{$notification->created_at->diffForHumans()}}</small>
+                                        <h6 class="mb-1">Sua aposta foi feita</h6>
+                                        <small class="d-block">A 2 horas</small>
                                     </div>
                                 </div>
                             </a>
                         </li>
-                        @endforeach
                     </ul>
                 </div>
             </div>
 
         </li>
-        @endif
 
         <!-- AJUDA
             
@@ -212,11 +199,11 @@
         @else
         <!--BTN Depositar -->
         <li class="nav-item  pl-3">
-            <a href="{{ route('admin.dashboards.wallet.recharge') }}"  onclick="toggleModal('login')" type="button" class="btn btn-despositar">Entrar
+            <a href=""  onclick="toggleModal('login')" type="button" class="btn btn-despositar">Entrar
             </a>
         </li>
         <li class="nav-item pl-3">
-            <a href="{{ route('admin.dashboards.wallet.recharge') }}" onclick="toggleModal('register')" type="button"
+            <a href="" onclick="toggleModal('register')" type="button"
                 class="btn btn-despositar">Cadastre-se
             </a>
         </li>
@@ -224,5 +211,5 @@
 
     </ul>
 
-
+</div>
 </nav>

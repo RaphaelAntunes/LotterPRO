@@ -3,6 +3,7 @@
 @section('title', trans('admin.dashboard.page-title'))
 
 @section('content')
+
 <div class="row bg-cc p-2 p-md-5">
 
 
@@ -25,9 +26,150 @@
 
         </div>
     </div>
+
+    <!-- Modal Create game -->
+    <div class="modal fade" id="modalcreategame" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-login" style="border-radius:10px;">
+                <div class="col-md-4" style="align-self: flex-end">
+                    <button style="background:#ffe400; color:black; padding:3px;" type="submit"
+                        class="btn btn-block btn-success mt-3">Adicionar Saldo
+                    </button>
+                </div>
+                <div class="d-flex container card-jogos-done mt-3">
+                    <div class="mr-4">
+                        <img style=" border-radius: 50%;
+                        width: 150px;"
+                            src="https://ambientedev.loteriabr.com/storage/logo/L5SDLyqo1PGdh9WUd2Qna8tkhxt8i2otwHLQHU28.jpg"
+                            alt="">
+                    </div>
+                    <div>
+                        <h1>Nome do Jogo</h1>
+                        <p>Descrição de como jogar Descrição de como jogar Descrição de como jogarDescrição de como
+                            jogar Descrição de como jogar</p>
+                        <span>premiação maxima: 1000,000</span>
+                    </div>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center mt-3">
+                    <div class="form-group p-2">
+                        <select style="background: #303536;" class="form-select form-control mb-2">
+                            <option value="7">7 numeros (pode ganhar 3000 vezes)</option>
+                            <option value="8">8 numeros (pode ganhar 1500 vezes)</option>
+                            <option value="9">9 numeros (pode ganhar 500 vezes)</option>
+                            <option value="10">10 numeros (pode ganhar 300 vezes)</option>
+                            <option value="15">15 numeros (pode ganhar 15 vezes)</option>
+                            <option value="16">16 numeros (pode ganhar 5 vezes)</option>
+                        </select>
+                    </div>
+                    <h4 style="background:#303536; font-size:20px; padding:10px; border-radius:100px;"
+                        class="numselecteds textbtnresponsive">Quantidade selecionada:<c style="color:#ffe400;">(0/25)
+                        </c>
+                    </h4>
+                    <div class="d-flex align-items-center mt-3 mb-3">
+                        <button type="submit" class="btn btn-block btn-success mr-5">Confirmar Aposta
+                        </button>
+                        <button style="margin: 0; background: #c95f5f;" type="submit"
+                            class="btn btn-block btn-success">Cancelar Aposta
+                        </button>
+                    </div>
+                </div>
+                <table class="table text-center">
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <button id="number_1" type="button" class="btn btn-warning btn-full">1</button>
+                            </td>
+                            <td>
+                                <button id="number_2" type="button" class="btn btn-warning btn-full">2</button>
+                            </td>
+                            <td>
+                                <button id="number_3" type="button" class="btn btn-warning btn-full">3</button>
+                            </td>
+                            <td>
+                                <button id="number_4" type="button" class="btn btn-warning btn-full">4</button>
+                            </td>
+                            <td>
+                                <button id="number_5" type="button" class="btn btn-warning btn-full">5</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button id="number_6" type="button" class="btn btn-warning btn-full">6</button>
+                            </td>
+                            <td>
+                                <button id="number_7" type="button" class="btn btn-warning btn-full">7</button>
+                            </td>
+                            <td>
+                                <button id="number_8" type="button" class="btn btn-warning btn-full">8</button>
+                            </td>
+                            <td>
+                                <button id="number_9" type="button" class="btn btn-warning btn-full">9</button>
+                            </td>
+                            <td>
+                                <button id="number_10" type="button" class="btn btn-warning btn-full">10</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button id="number_11" type="button" class="btn btn-warning btn-full">11</button>
+                            </td>
+                            <td>
+                                <button id="number_12" type="button" class="btn btn-warning btn-full">12</button>
+                            </td>
+                            <td>
+                                <button id="number_13" type="button" class="btn btn-warning btn-full">13</button>
+                            </td>
+                            <td>
+                                <button id="number_14" type="button" class="btn btn-warning btn-full">14</button>
+                            </td>
+                            <td>
+                                <button id="number_15" type="button" class="btn btn-warning btn-full">15</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button id="number_16" type="button" class="btn btn-warning btn-full">16</button>
+                            </td>
+                            <td>
+                                <button id="number_17" type="button" class="btn btn-warning btn-full">17</button>
+                            </td>
+                            <td>
+                                <button id="number_18" type="button" class="btn btn-warning btn-full">18</button>
+                            </td>
+                            <td>
+                                <button id="number_19" type="button" class="btn btn-warning btn-full">19</button>
+                            </td>
+                            <td>
+                                <button id="number_20" type="button" class="btn btn-warning btn-full">20</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button id="number_21" type="button" class="btn btn-warning btn-full">21</button>
+                            </td>
+                            <td>
+                                <button id="number_22" type="button" class="btn btn-warning btn-full">22</button>
+                            </td>
+                            <td>
+                                <button id="number_23" type="button" class="btn btn-warning btn-full">23</button>
+                            </td>
+                            <td>
+                                <button id="number_24" type="button" class="btn btn-warning btn-full">24</button>
+                            </td>
+                            <td>
+                                <button id="number_25" type="button" class="btn btn-warning btn-full">25</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+    </div>
     <script>
-
-
         $('.modal-register').hide();
 
 
@@ -52,55 +194,15 @@
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-                @foreach($layout_carousel_grande as $key => $item)
-                    @if (isset($User))
-                        @if($item['visivel'] == 1 && ($item['visible_type_client'] == 1 || $User['type_client'] != 1))
-                            <li data-target="#carouselExampleIndicators" data-slide-to="{{ $key }}"
-                                class="{{ $key == 0 ? 'active' : '' }}"></li>
-                        @endif
-                    @else
-                        @if($item['visivel'] == 1 && $item['visible_type_client'] == 1 )
-                        <li data-target="#carouselExampleIndicators" data-slide-to="{{ $key }}"
-                            class="{{ $key == 0 ? 'active' : '' }}"></li>
-                        @endif 
-                    @endif
-                @endforeach
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+
             </ol>
-        <div class="carousel-inner">
+            <div class="carousel-inner">
 
-        @foreach($layout_carousel_grande as $key => $item)
-            @if (isset($User))
-                @if($item['visivel'] == 1 && ($item['visible_type_client'] == 1 || $User['type_client'] != 1))
-                    <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                    @if(!empty($item['link']))
-                        <a href="{{ $item['link'] }}" target="_blank">
-                    @endif
-                    <img class="d-block w-100" src="{{ isset($item['url']) ? asset("storage/{$item['url']}") :
-                    asset('https://i.ibb.co/68Nh8sS/pf-Skj6-MF8b-Rv1-POOPGCee-EL94u8-P2bf9jl2czixi.jpg') }}"
-                    alt="{{ $item['nome'] }}">
-                @if(!empty($item['link']))
-                    </a>
-                @endif
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="https://i.ibb.co/pRpF3xw/Texto-do-seu-par-grafo.jpg" alt="aaa">
+                </div>
             </div>
-        @endif
-
-        @else
-        @if($item['visivel'] == 1 && $item['visible_type_client'] == 1 )
-            <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                @if(!empty($item['link']))
-                    <a href="{{ $item['link'] }}" target="_blank">
-                @endif
-                    <img class="d-block w-100" src="{{ isset($item['url']) ? asset("storage/{$item['url']}") :
-                        asset('https://i.ibb.co/68Nh8sS/pf-Skj6-MF8b-Rv1-POOPGCee-EL94u8-P2bf9jl2czixi.jpg') }}"
-                        alt="{{ $item['nome'] }}">
-                @if(!empty($item['link']))
-                    </a>
-                @endif
-            </div>
-        @endif
-        @endif
-    @endforeach
-</div>
 
             <a class="carousel-control-prev nott" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon " aria-hidden="true"></span>
@@ -121,617 +223,559 @@
         <!-- Conteúdo da sua view existente -->
         <div class="swiperroll p-2">
             <div class="swiper-wrapper">
-                <!-- {{$TypeGamesRoll}} -->
-                @foreach($TypeGamesRoll as $typeGame)
-                <div class="swiper-slide d-flex flex-column category-info"
-                    data-type-game-id="{{ $typeGame->category }}">
+                <div class="swiper-slide d-flex flex-column category-info" data-type-game-id="loto_facil">
                     <div class="icon-container">
-                        <img class="img-bold"
-                            src="{{ $typeGame->icon ? asset('/storage/'.str_replace('.png', '-bold.png', $typeGame->icon)) : asset('/storage/megasena-bold.png') }}"
-                            alt="">
+                        <img class="img-bold" src="https://i.ibb.co/LSKMnnt/50-x-58.jpg" alt="">
 
                     </div>
                     <div>
-                        <p class="txtnav">{{ ucwords(str_replace('_', ' ', $typeGame->name)) }}</p>
+                        <p class="txtnav">JOGO 1</p>
                     </div>
                 </div>
-                @endforeach
-            </div>
-        </div>
+                <div class="swiper-slide d-flex flex-column category-info" data-type-game-id="quina">
+                    <div class="icon-container">
+                        <img class="img-bold" src="https://i.ibb.co/LSKMnnt/50-x-58.jpg" alt="">
 
-
-        @if(auth()->user())
-        <!-- Se for usuario aparece -->
-        @if($User['type_client'] == 1)
-        <div class="container-fluid d-flex align-items-center justify-content-center card-indica mt-2 "
-            href="#collapseExample2" data-toggle="collapse" role="button" aria-expanded="false"
-            aria-controls="collapseExample" style="border-bottom:1px solid #A3D712;">
-            <span style="font-size:20px;" class="mr-3">💥</span>
-            <h5 class="mr-3">Indique e ganhe em cada amigo que convidar</h5>
-            <span style="font-size:20px;" class="mr-3">💥</span>
-
-            <i class="fa fa-angle-down" style="color:#A3D712;" aria-hidden="true"></i>
-
-        </div>
-        <p>
-        </p>
-        <div class="collapse" id="collapseExample2">
-            <div class="card card-body">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Indicação</th>
-                            <th scope="col">Ação</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Cadastro</td>
-                            <td> <sl-copy-button class="icon-copy"
-                                    value="{{ env('APP_URL') }}/admin/indicate/{{ auth()->user()->id }}"></sl-copy-button>
-                            </td>
-                        </tr>
-                        @if($User['type_client'] == 1)
-
-
-                        <tr>
-                            <td>Minhas Indicações</td>
-                            <td><a href="{{ env('APP_URL') }}/admin/settings/indicated"><i
-                                        style="font-size:20px; color:#A3D712;" class="fa fa-arrow-right"
-                                        aria-hidden="true"></i></a>
-
-                            </td>
-                        </tr>
-                        @endif
-
-
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        @endif
-        @if($User['type_client'] != 1)
-
-        <div class="container-fluid d-flex align-items-center justify-content-center card-indica mt-2 "
-            href="#collapseExample" data-toggle="collapse" role="button" aria-expanded="false"
-            aria-controls="collapseExample" style="border-bottom:1px solid red;">
-            <span style="font-size:20px;" class="mr-3">💥</span>
-            <h5 class="mr-3">Indique e ganhe em cada amigo que convidar</h5>
-            <span style="font-size:20px;" class="mr-3">💥</span>
-
-            <i class="fa fa-angle-down" style="color:#A3D712;" aria-hidden="true"></i>
-
-        </div>
-        <p>
-        </p>
-        <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Indicação</th>
-                            <th scope="col">Ação</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Cadastro</td>
-                            <td> <sl-copy-button class="icon-copy"
-                                    value="{{ env('APP_URL') }}/admin/indicate/{{ auth()->user()->id }}"></sl-copy-button>
-                            </td>
-                        </tr>
-                         @if($User['type_client'] != 1)
-                        <tr>
-                            <td>Jogo Avulso</td>
-                            <td> <sl-copy-button class="icon-copy"
-                                    value="{{ env('APP_URL') }}/games/{{ auth()->user()->id }}"></sl-copy-button>
-                            </td>
-                        </tr>
-                    @endif
-                        <tr>
-                            <td>Minhas Indicações</td>
-                            <td><a href="{{ env('APP_URL') }}/admin/settings/indicated"><i
-                                        style="font-size:20px; color:#A3D712;" class="fa fa-arrow-right"
-                                        aria-hidden="true"></i></a>
-
-                            </td>
-                        </tr>
-
-
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-
-        @endif
-
-        <!-- Div para renderizar as categorias -->
-        <div id="categories-container">
-        </div>
-    </div>
-    @endif
-    <!-- Recomendados -->
-    <div class="container mt-5">
-        <div class="d-flex swipe-controles justify-content-between align-items-center mb-2">
-            <div class="d-flex">
-                <h1 style="color:white">Recomendados</h1>
-                <svg width="10" class="ml-3 mr-3 swiper-prev swp" fill="#5A6268" color="#5A6268" data-v-3d6f2aec=""
-                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                    <path fill="currentColor"
-                        d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z">
-                    </path>
-                </svg>
-                <svg width="10" class="swiper-next swp" fill="#5A6268" color="#5A6268" data-v-3d6f2aec=""
-                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                    <path fill="currentColor"
-                        d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z">
-                    </path>
-                </svg>
-            </div>
-            <div>
-                <!-- <button class="btn btn-moregame">Ver todos</button> -->
-            </div>
-        </div>
-        @if(\App\Models\TypeGame::where('recomendado', 1)->count() > 0)
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                @foreach(\App\Models\TypeGame::where('recomendado', 1)->get() as $typeGame)
-                <div class="swiper-slide" >
-                    <a href="{{route('admin.bets.games.create', ['type_game' => $typeGame->id])}}">
-                        <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;" src="{{ $typeGame->banner_pc ? asset("storage/{$typeGame->banner_pc}") :
-                        asset('https://i.ibb.co/VWhHF8D/Yys88-SZf-Yy-AI4oo61k-Bd-Fw-Kq-Sl-R0k-Cu-Wd-DDQUVj5.jpg') }}"
-                        alt="{{ $typeGame->name }}" class="d-none d-md-block">
-                        <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"  src="{{ $typeGame->banner_mobile ? asset("storage/{$typeGame->banner_mobile}") :
-                        asset('https://i.ibb.co/0yB31KB/60-Yp-Ckw9vf-EZXF9-Md4la52d-BK5j-YUPfqjx-E6c-Pro.jpg') }}"
-                        alt="{{ $typeGame->name }}" class="d-md-none" >
-
-                        <a>
+                    </div>
+                    <div>
+                        <p class="txtnav">JOGO 2</p>
+                    </div>
                 </div>
-                @endforeach
-            </div>
-        </div>
-        @endif
+                <div class="swiper-slide d-flex flex-column category-info" data-type-game-id="mega_sena">
+                    <div class="icon-container">
+                        <img class="img-bold" src="https://i.ibb.co/LSKMnnt/50-x-58.jpg" alt="">
 
-    </div>
-
-    <!-- Todos os jogos -->
-    @if(\App\Models\TypeGame::count() > 0)
-    <div class="container mt-5">
-        <div class="d-flex swipe-controles align-items-center mb-2">
-            <h1 style="color:white">Todos os Jogos</h1>
-        </div>
-
-        <div class="d-flex flex-wrap justify-content-center">
-            @php
-            $typeGames = \App\Models\TypeGame::get();
-            $count = 0;
-            @endphp
-
-            @foreach($typeGames as $typeGame)
-            <div class="d-flex p-2 box-imgs">
-                <a href="{{ route('admin.bets.games.create', ['type_game' => $typeGame->id]) }}"
-                    class="hover-container" >
-                    <img class="img-todos-jogos"  style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;" src="{{ $typeGame->banner_mobile ? asset("storage/{$typeGame->banner_mobile}") :
-                    asset('https://i.ibb.co/0yB31KB/60-Yp-Ckw9vf-EZXF9-Md4la52d-BK5j-YUPfqjx-E6c-Pro.jpg') }}"
-                    alt="{{ $typeGame->name }} " >
-                    <div class="hover-content">
-                        <p>{{ $typeGame->name }}</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
                     </div>
-                </a>
-            </div>
-
-           
-            @endforeach
-        @endif
-     
-    <!-- @if(\App\Models\TypeGame::count() > 0)
-    <div class="container mt-5">
-        <div class="d-flex swipe-controles align-items-center mb-2">
-            <h1 style="color:white">Todos os Jogos</h1>
-        </div>
-
-        <div class="d-flex flex-wrap justify-content-center">
-            @php
-            $typeGames = \App\Models\TypeGame::get();
-            $count = 0;
-            @endphp
-
-            @foreach($typeGames as $typeGame)
-            <div class="d-flex p-2 box-imgs">
-                <a href="{{ route('admin.bets.games.create', ['type_game' => $typeGame->id]) }}"
-                    class="hover-container" >
-                    <img class="img-todos-jogos"  style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;" src="{{ $typeGame->banner_mobile ? asset("storage/{$typeGame->banner_mobile}") :
-                    asset('https://i.ibb.co/0yB31KB/60-Yp-Ckw9vf-EZXF9-Md4la52d-BK5j-YUPfqjx-E6c-Pro.jpg') }}"
-                    alt="{{ $typeGame->name }} " >
-                    <div class="hover-content">
-                        <p>{{ $typeGame->name }}</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
+                    <div>
+                        <p class="txtnav">JOGO 3</p>
                     </div>
-                </a>
-            </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column category-info" data-type-game-id="loto_mania">
+                    <div class="icon-container">
+                        <img class="img-bold" src="https://i.ibb.co/LSKMnnt/50-x-58.jpg" alt="">
 
-            @php
-            $count++;
-            if ($count == 12) {
-            break;
-            }
-            @endphp
-            @endforeach
-
-            @if($typeGames->count() > 12)
-            <p>
-            <div class="collapse" id="collapseExampledd">
-            <div class="d-flex flex-wrap justify-content-center justify-content-md-start ">
-                    @foreach($typeGames->splice(12) as $typeGame)
-                    <div class="d-flex p-2 box-imgs">
-                        <a href="{{ route('admin.bets.games.create', ['type_game' => $typeGame->id]) }}"
-                            class="hover-container">
-                            <img class="img-todos-jogos"  style="border-radius:10px;" src="{{ $typeGame->banner_mobile ? asset("storage/{$typeGame->banner_mobile}") :
-                            asset('https://i.ibb.co/0yB31KB/60-Yp-Ckw9vf-EZXF9-Md4la52d-BK5j-YUPfqjx-E6c-Pro.jpg') }}"
-                            alt="{{ $typeGame->name }} " >
-                            <div class="hover-content">
-                                <p>{{ $typeGame->name }}</p>
-                                <button class="btn btn-primary">Jogar Agora</button>
-                            </div>
-                        </a>
                     </div>
-                    @endforeach
+                    <div>
+                        <p class="txtnav">JOGO 4</p>
+                    </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column category-info" data-type-game-id="dia_de_sorte">
+                    <div class="icon-container">
+                        <img class="img-bold" src="https://i.ibb.co/LSKMnnt/50-x-58.jpg" alt="">
+
+                    </div>
+                    <div>
+                        <p class="txtnav">JOGO 5</p>
+                    </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column category-info" data-type-game-id="time_mania">
+                    <div class="icon-container">
+                        <img class="img-bold" src="https://i.ibb.co/LSKMnnt/50-x-58.jpg" alt="">
+
+                    </div>
+                    <div>
+                        <p class="txtnav">JOGO 6</p>
+                    </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column category-info" data-type-game-id="dupla_sena">
+                    <div class="icon-container">
+                        <img class="img-bold" src="https://i.ibb.co/LSKMnnt/50-x-58.jpg" alt="">
+
+                    </div>
+                    <div>
+                        <p class="txtnav">JOGO 7</p>
+                    </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column category-info" data-type-game-id="mais_milionaria">
+                    <div class="icon-container">
+                        <img class="img-bold" src="https://i.ibb.co/LSKMnnt/50-x-58.jpg" alt="">
+
+                    </div>
+                    <div>
+                        <p class="txtnav">JOGO 8</p>
+                    </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column category-info" data-type-game-id="lotinha_corujao">
+                    <div class="icon-container">
+                        <img class="img-bold" src="https://i.ibb.co/LSKMnnt/50-x-58.jpg" alt="">
+
+                    </div>
+                    <div>
+                        <p class="txtnav">JOGO 9</p>
+                    </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column category-info" data-type-game-id="mega_kino">
+                    <div class="icon-container">
+                        <img class="img-bold" src="https://i.ibb.co/LSKMnnt/50-x-58.jpg" alt="">
+
+                    </div>
+                    <div>
+                        <p class="txtnav">JOGO 10</p>
+                    </div>
+                </div>
+                <div class="swiper-slide d-flex flex-column category-info" data-type-game-id="santa_lucia_double">
+                    <div class="icon-container">
+                        <img class="img-bold" src="https://i.ibb.co/LSKMnnt/50-x-58.jpg" alt="">
+
+                    </div>
+                    <div>
+                        <p class="txtnav">JOGO 11</p>
+                    </div>
                 </div>
             </div>
-
-            </p>
-            @endif
-        </div> -->
-        <!-- @if(\App\Models\TypeGame::count() > 12)
-
-        <div class="d-flex justify-content-center align-items-center mt-5">
-            <button class="btn btn-primary btn-collapse" data-toggle="collapse" href="#collapseExampledd" role="button"
-                aria-expanded="false" aria-controls="collapseExample">
-                Ver Mais
-            </button>
-        </div>
-        @endif -->
-
-    </div>
-    @endif
-
-
-    <!-- Bichao da sorte
-
-    <div class="container mt-5">
-        <div class="d-flex swipe-controles align-items-center mb-2">
-            <h1 style="color:white">Bichão da Sorte</h1>
         </div>
 
-        <div class="d-flex flex-wrap justify-content-center">
-                                
-
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://imagedelivery.net/BgH9d8bzsn4n0yijn4h7IQ/3deaeed0-dbf3-4064-ada6-00ed81a72d00/ipad"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Milhar</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/centena" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://imagedelivery.net/BgH9d8bzsn4n0yijn4h7IQ/3deaeed0-dbf3-4064-ada6-00ed81a72d00/ipad"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Centena</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/dezena" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://imagedelivery.net/BgH9d8bzsn4n0yijn4h7IQ/3deaeed0-dbf3-4064-ada6-00ed81a72d00/ipad"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Dezena</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/group" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://imagedelivery.net/BgH9d8bzsn4n0yijn4h7IQ/3deaeed0-dbf3-4064-ada6-00ed81a72d00/ipad"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Grupo</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/milhar/centena" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://imagedelivery.net/BgH9d8bzsn4n0yijn4h7IQ/3deaeed0-dbf3-4064-ada6-00ed81a72d00/ipad"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Milhar/Centena</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/terno/dezena" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://imagedelivery.net/BgH9d8bzsn4n0yijn4h7IQ/3deaeed0-dbf3-4064-ada6-00ed81a72d00/ipad"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Terno/Dezena</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/duque/dezena" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://imagedelivery.net/BgH9d8bzsn4n0yijn4h7IQ/3deaeed0-dbf3-4064-ada6-00ed81a72d00/ipad"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Duque/Dezena</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/quina/grupo" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://imagedelivery.net/BgH9d8bzsn4n0yijn4h7IQ/3deaeed0-dbf3-4064-ada6-00ed81a72d00/ipad"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Quina/Grupo</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/quadra/grupo" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://imagedelivery.net/BgH9d8bzsn4n0yijn4h7IQ/3deaeed0-dbf3-4064-ada6-00ed81a72d00/ipad"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Quadra/Grupo</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/terno/grupo" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://imagedelivery.net/BgH9d8bzsn4n0yijn4h7IQ/3deaeed0-dbf3-4064-ada6-00ed81a72d00/ipad"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Terno/Grupo</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/duque/grupo" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://imagedelivery.net/BgH9d8bzsn4n0yijn4h7IQ/3deaeed0-dbf3-4064-ada6-00ed81a72d00/ipad"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Duque/Grupo</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/unidade" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://imagedelivery.net/BgH9d8bzsn4n0yijn4h7IQ/3deaeed0-dbf3-4064-ada6-00ed81a72d00/ipad"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Unidade</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
-           
-            <p>
-            <div class="collapse" id="collapseExampleddd">
+        <!-- Recomendados -->
+        <div class="container mt-5">
+            <div class="d-flex swipe-controles justify-content-between align-items-center mb-2">
                 <div class="d-flex">
-                <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/milhar/invertida" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://imagedelivery.net/BgH9d8bzsn4n0yijn4h7IQ/3deaeed0-dbf3-4064-ada6-00ed81a72d00/ipad"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Milhar/Inverida</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div> <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/centena/invertida" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://imagedelivery.net/BgH9d8bzsn4n0yijn4h7IQ/3deaeed0-dbf3-4064-ada6-00ed81a72d00/ipad"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Centena/Invertida</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
+                    <h1 style="color:white">Recomendados</h1>
+                    <svg width="10" class="ml-3 mr-3 swiper-prev swp" fill="#5A6268" color="#5A6268" data-v-3d6f2aec=""
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                            d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z">
+                        </path>
+                    </svg>
+                    <svg width="10" class="swiper-next swp" fill="#5A6268" color="#5A6268" data-v-3d6f2aec=""
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                            d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z">
+                        </path>
+                    </svg>
+                </div>
+                <div>
                 </div>
             </div>
 
-            </p>
-        </div>
-        <div class="d-flex justify-content-center align-items-center mt-5 mb-5">
-            <button class="btn btn-primary btn-collapse" data-toggle="collapse" href="#collapseExampleddd" role="button"
-                aria-expanded="false" aria-controls="collapseExample">
-                Ver Mais
-            </button>
-        </div>
-         
-        </div>
-       
-    </div> -->
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                src="https://i.ibb.co/VDCcFWP/360-x-100.jpg" class="d-none d-md-block">
+                            <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                src="https://i.ibb.co/VDCcFWP/360-x-100.jpg" class="d-md-none">
 
-   <!-- Bichao da sorte -->
-   @if(\App\Helper\Configs::getBichao() == "Ativado")
+                            <a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                src="https://i.ibb.co/VDCcFWP/360-x-100.jpg" class="d-none d-md-block">
+                            <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                src="https://i.ibb.co/VDCcFWP/360-x-100.jpg" class="d-md-none">
 
-   <div class="container mt-5">
-        <div class="d-flex swipe-controles align-items-center mb-2">
-            <h1 style="color:white">Bichão da Sorte</h1>
+                            <a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                src="https://i.ibb.co/VDCcFWP/360-x-100.jpg" class="d-none d-md-block">
+                            <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                src="https://i.ibb.co/VDCcFWP/360-x-100.jpg" class="d-md-none">
+
+                            <a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                src="https://i.ibb.co/VDCcFWP/360-x-100.jpg" class="d-none d-md-block">
+                            <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                src="https://i.ibb.co/VDCcFWP/360-x-100.jpg" class="d-md-none">
+
+                            <a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                src="https://i.ibb.co/VDCcFWP/360-x-100.jpg" class="d-none d-md-block">
+                            <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                src="https://i.ibb.co/VDCcFWP/360-x-100.jpg" class="d-md-none">
+
+                            <a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                src="https://i.ibb.co/VDCcFWP/360-x-100.jpg" class="d-none d-md-block">
+                            <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                src="https://i.ibb.co/VDCcFWP/360-x-100.jpg" class="d-md-none">
+
+                            <a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                src="https://i.ibb.co/VDCcFWP/360-x-100.jpg" class="d-none d-md-block">
+                            <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                src="https://i.ibb.co/VDCcFWP/360-x-100.jpg" class="d-md-none">
+
+                            <a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                src="https://i.ibb.co/VDCcFWP/360-x-100.jpg" class="d-none d-md-block">
+                            <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                src="https://i.ibb.co/VDCcFWP/360-x-100.jpg" class="d-md-none">
+
+                            <a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                src="https://i.ibb.co/VDCcFWP/360-x-100.jpg" class="d-none d-md-block">
+                            <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                src="https://i.ibb.co/VDCcFWP/360-x-100.jpg" class="d-md-none">
+
+                            <a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="0">
+                            <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                src="https://i.ibb.co/VDCcFWP/360-x-100.jpg" class="d-none d-md-block">
+                            <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                src="https://i.ibb.co/VDCcFWP/360-x-100.jpg" class="d-md-none">
+
+                            <a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="1">
+                            <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                src="https://i.ibb.co/VDCcFWP/360-x-100.jpg" class="d-none d-md-block">
+                            <img style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                src="https://i.ibb.co/VDCcFWP/360-x-100.jpg" class="d-md-none">
+
+                            <a>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="d-flex flex-wrap justify-content-center">
-                                
+        <div class="container mt-5">
+            <div class="d-flex swipe-controles justify-content-between align-items-center mb-2">
+                <div class="d-flex">
+                    <h1 style="color:white">Sorteios Hoje</h1>
+                    <svg width="10" class="ml-3 mr-3 swiper-jogos-prev swp" fill="#5A6268" color="#5A6268"
+                        data-v-3d6f2aec="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                            d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z">
+                        </path>
+                    </svg>
+                    <svg width="10" class="swiper-jogos-next swp" fill="#5A6268" color="#5A6268" data-v-3d6f2aec=""
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                            d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z">
+                        </path>
+                    </svg>
+                </div>
+                <div>
+                </div>
+            </div>
 
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://i.ibb.co/m65kWYw/Milhar-165-x-192-px.png"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Milhar</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
+            <div class="swiperjogos">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="d-flex p-2 box-imgs">
+                            <a href="" class="hover-container">
+                                <img class="img-todos-jogos"
+                                    style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                    src="https://i.ibb.co/8KYqhP4/159-x-185.jpg">
+                                <div class="hover-content">
+                                    <p>Jogo</p>
+                                    <button class="btn btn-primary">Jogar Agora</button>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </a>
+                    <div class="swiper-slide">
+                        <div class="d-flex p-2 box-imgs">
+                            <a href="" class="hover-container">
+                                <img class="img-todos-jogos"
+                                    style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                    src="https://i.ibb.co/8KYqhP4/159-x-185.jpg">
+                                <div class="hover-content">
+                                    <p>Jogo</p>
+                                    <button class="btn btn-primary">Jogar Agora</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex p-2 box-imgs">
+                            <a href="" class="hover-container">
+                                <img class="img-todos-jogos"
+                                    style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                    src="https://i.ibb.co/8KYqhP4/159-x-185.jpg">
+                                <div class="hover-content">
+                                    <p>Jogo</p>
+                                    <button class="btn btn-primary">Jogar Agora</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex p-2 box-imgs">
+                            <a href="" class="hover-container">
+                                <img class="img-todos-jogos"
+                                    style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                    src="https://i.ibb.co/8KYqhP4/159-x-185.jpg">
+                                <div class="hover-content">
+                                    <p>Jogo</p>
+                                    <button class="btn btn-primary">Jogar Agora</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex p-2 box-imgs">
+                            <a href="" class="hover-container">
+                                <img class="img-todos-jogos"
+                                    style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                    src="https://i.ibb.co/8KYqhP4/159-x-185.jpg">
+                                <div class="hover-content">
+                                    <p>Jogo</p>
+                                    <button class="btn btn-primary">Jogar Agora</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex p-2 box-imgs">
+                            <a href="" class="hover-container">
+                                <img class="img-todos-jogos"
+                                    style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                    src="https://i.ibb.co/8KYqhP4/159-x-185.jpg">
+                                <div class="hover-content">
+                                    <p>Jogo</p>
+                                    <button class="btn btn-primary">Jogar Agora</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex p-2 box-imgs">
+                            <a href="" class="hover-container">
+                                <img class="img-todos-jogos"
+                                    style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                    src="https://i.ibb.co/8KYqhP4/159-x-185.jpg">
+                                <div class="hover-content">
+                                    <p>Jogo</p>
+                                    <button class="btn btn-primary">Jogar Agora</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex p-2 box-imgs">
+                            <a href="" class="hover-container">
+                                <img class="img-todos-jogos"
+                                    style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                    src="https://i.ibb.co/8KYqhP4/159-x-185.jpg">
+                                <div class="hover-content">
+                                    <p>Jogo</p>
+                                    <button class="btn btn-primary">Jogar Agora</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex p-2 box-imgs">
+                            <a href="" class="hover-container">
+                                <img class="img-todos-jogos"
+                                    style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                    src="https://i.ibb.co/8KYqhP4/159-x-185.jpg">
+                                <div class="hover-content">
+                                    <p>Jogo</p>
+                                    <button class="btn btn-primary">Jogar Agora</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex p-2 box-imgs">
+                            <a href="" class="hover-container">
+                                <img class="img-todos-jogos"
+                                    style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                    src="https://i.ibb.co/8KYqhP4/159-x-185.jpg">
+                                <div class="hover-content">
+                                    <p>Jogo</p>
+                                    <button class="btn btn-primary">Jogar Agora</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/centena" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://i.ibb.co/Wgtc5bN/Centena-165-x-192-px.png"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Centena</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/dezena" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://i.ibb.co/GHf0xCL/1.png"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Dezena</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/group" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://i.ibb.co/cNvL0Ky/2.png"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Grupo</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/milhar/centena" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://i.ibb.co/yN3GZHt/8.png"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Milhar/Centena</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/terno/dezena" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://i.ibb.co/wK8SCfb/3.png"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Terno/Dezena</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/duque/dezena" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://i.ibb.co/984j3Nv/4.png"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Duque/Dezena</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/quina/grupo" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://i.ibb.co/M6PjL5v/6.png"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Quina/Grupo</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/quadra/grupo" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://i.ibb.co/N2WD7Pg/7.png"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Quadra/Grupo</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/terno/grupo" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://i.ibb.co/7yMMg0L/8.png"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Terno/Grupo</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/duque/grupo" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://i.ibb.co/HdN58PM/9.png"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Duque/Grupo</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/unidade" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://i.ibb.co/svXBSb3/10.png"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Unidade</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
-            </div>
-            <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/milhar/invertida" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://i.ibb.co/RH22Q2X/11.png"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Milhar/Inverida</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
+
         </div>
-        <div class="d-flex p-2 box-imgs">
-                <a href="/admin/bets/bichao/centena/invertida" class="hover-container">
-                    <img class="img-todos-jogos" style="border-radius:10px;"  src="https://i.ibb.co/nssBBTy/12.png"
-                        alt="{{ $typeGame->name }}">
-                    <div class="hover-content">
-                        <p>Centena/Invertida</p>
-                        <button class="btn btn-primary">Jogar Agora</button>
-                    </div>
-                </a>
+
+
+        <div class="container mt-5">
+            <div class="d-flex swipe-controles justify-content-between align-items-center mb-2">
+                <div class="d-flex">
+                    <h1 style="color:white">Jogos</h1>
+                    <svg width="10" class="ml-3 mr-3 swiper-jogos2-prev swp" fill="#5A6268" color="#5A6268"
+                        data-v-3d6f2aec="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                            d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z">
+                        </path>
+                    </svg>
+                    <svg width="10" class="swiper-jogos2-next swp" fill="#5A6268" color="#5A6268" data-v-3d6f2aec=""
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                            d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z">
+                        </path>
+                    </svg>
+                </div>
+                <div>
+                </div>
             </div>
-   
+
+            <div class="swiperjogos2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="d-flex p-2 box-imgs">
+                            <a href="" class="hover-container">
+                                <img class="img-todos-jogos"
+                                    style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                    src="https://i.ibb.co/8KYqhP4/159-x-185.jpg">
+                                <div class="hover-content">
+                                    <p>Jogo</p>
+                                    <button class="btn btn-primary">Jogar Agora</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex p-2 box-imgs">
+                            <a href="" class="hover-container">
+                                <img class="img-todos-jogos"
+                                    style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                    src="https://i.ibb.co/8KYqhP4/159-x-185.jpg">
+                                <div class="hover-content">
+                                    <p>Jogo</p>
+                                    <button class="btn btn-primary">Jogar Agora</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex p-2 box-imgs">
+                            <a href="" class="hover-container">
+                                <img class="img-todos-jogos"
+                                    style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                    src="https://i.ibb.co/8KYqhP4/159-x-185.jpg">
+                                <div class="hover-content">
+                                    <p>Jogo</p>
+                                    <button class="btn btn-primary">Jogar Agora</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex p-2 box-imgs">
+                            <a href="" class="hover-container">
+                                <img class="img-todos-jogos"
+                                    style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                    src="https://i.ibb.co/8KYqhP4/159-x-185.jpg">
+                                <div class="hover-content">
+                                    <p>Jogo</p>
+                                    <button class="btn btn-primary">Jogar Agora</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex p-2 box-imgs">
+                            <a href="" class="hover-container">
+                                <img class="img-todos-jogos"
+                                    style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                    src="https://i.ibb.co/8KYqhP4/159-x-185.jpg">
+                                <div class="hover-content">
+                                    <p>Jogo</p>
+                                    <button class="btn btn-primary">Jogar Agora</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex p-2 box-imgs">
+                            <a href="" class="hover-container">
+                                <img class="img-todos-jogos"
+                                    style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                    src="https://i.ibb.co/8KYqhP4/159-x-185.jpg">
+                                <div class="hover-content">
+                                    <p>Jogo</p>
+                                    <button class="btn btn-primary">Jogar Agora</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex p-2 box-imgs">
+                            <a href="" class="hover-container">
+                                <img class="img-todos-jogos"
+                                    style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                    src="https://i.ibb.co/8KYqhP4/159-x-185.jpg">
+                                <div class="hover-content">
+                                    <p>Jogo</p>
+                                    <button class="btn btn-primary">Jogar Agora</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex p-2 box-imgs">
+                            <a href="" class="hover-container">
+                                <img class="img-todos-jogos"
+                                    style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                    src="https://i.ibb.co/8KYqhP4/159-x-185.jpg">
+                                <div class="hover-content">
+                                    <p>Jogo</p>
+                                    <button class="btn btn-primary">Jogar Agora</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex p-2 box-imgs">
+                            <a href="" class="hover-container">
+                                <img class="img-todos-jogos"
+                                    style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                    src="https://i.ibb.co/8KYqhP4/159-x-185.jpg">
+                                <div class="hover-content">
+                                    <p>Jogo</p>
+                                    <button class="btn btn-primary">Jogar Agora</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex p-2 box-imgs">
+                            <a href="" class="hover-container">
+                                <img class="img-todos-jogos"
+                                    style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;"
+                                    src="https://i.ibb.co/8KYqhP4/159-x-185.jpg">
+                                <div class="hover-content">
+                                    <p>Jogo</p>
+                                    <button class="btn btn-primary">Jogar Agora</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
-     
-        </div>
-       
+
+
+
+
     </div>
-
-@endif
-    
-
-</div>
 
 </div>
 
@@ -797,7 +841,7 @@
         border-radius: 50%;
         width: 80px;
         height: 80px;
-        background: #A3D712;
+        background: #ffe400;
         opacity: 0.15;
         top: 50%;
         left: 50%;
@@ -838,7 +882,7 @@
 
         .icon-copy {
             font-size: 25px;
-            color: #A3D712;
+            color: #ffe400;
         }
 
 
@@ -988,8 +1032,6 @@
     });
 </script>
 <script>
-
-
     $(document).ready(function () {
         $('.category-info').click(function () {
             var typeGameId = $(this).data('type-game-id');
@@ -1069,6 +1111,28 @@
             },
         });
 
+        var swiperjogos = new Swiper('.swiperjogos', {
+            slidesPerView: 6,
+            loop: true,
+            autoplay:true,
+            navigation: {
+                nextEl: '.swiper-jogos-next',
+                prevEl: '.swiper-jogos-prev',
+            },
+        });
+
+        var swiperjogos2 = new Swiper('.swiperjogos2', {
+            slidesPerView: 6,
+            loop: true,
+            autoplay:true,
+            navigation: {
+                nextEl: '.swiper-jogos2-next',
+                prevEl: '.swiper-jogos2-prev',
+            },
+        });
+
+        
+
         function formatTypeGameId(typeGameId) {
             // Divide a string em palavras
             var words = typeGameId.split('_');
@@ -1097,17 +1161,17 @@
 
         @if (!auth() -> check())
             $('a:not(.login, .nott), button:not(.btn-side,.login,.nott)').on('click', function (event) {
-                // Se não estiver autenticado, abre o modal
                 event.preventDefault();
                 $('#exampleModalCenter').modal('show');
             });
         @endif
 
-       
+      
+            
+        //$('#modalcreategame').modal('show');
 
 
-
-
+        
 
 
     });

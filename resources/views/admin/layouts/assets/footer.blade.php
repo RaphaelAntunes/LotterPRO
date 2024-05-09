@@ -1,54 +1,130 @@
 <footer class="main-footer">
-    <div class="d-flex">
-    <div class="p-3 d-none d-md-block container">
-        
-    </div><div class="d-flex justify-content-center text-center align-items-center container">
-        <div class="d-flex flex-column text-center align-items-center justify-content-center">
-            <img src="{{ App\Helper\Configs::getConfigLogo() }}" style="max-width: 50px;" alt="Logo"
-                class="brand-image img-circle " style="opacity: .8">
-            <span class="brand-text font-weight-light text-logo" style="font-size: 15px">{{
-                env("nome_sistema")}}</span>
-                <p class="" style="font-size: 12px;">
-               As melhores apostas são aqui!!!<Br>Comece agora mesmo</p>
-                
-            </div>
-    </div>
 
-    <div class="iconss container">
-        <p>Siga-nos</p>
-        <div class="d-flex">
-            <a href="" aria-label="Ver nossa página no facebook" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                    <path
-                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
-                        fill="currentColor"> </path>
+    <div class="d-flex flex-md-row flex-column">
+
+        <div
+            class="d-flex ftr justify-content-center flex-column text-center align-items-center container col-md-4 p-4">
+            <div class="d-flex flex-column text-center align-items-center justify-content-center">
+                <img src="{{ asset('/admin/images/painel/logoicon.png')}}" style="width: 60%; padding:6px;" alt="Logo"
+                    class="brand-image img-circle " style="opacity: .8">
+                <span class="brand-text font-weight-light text-logo" style="font-size: 15px"><a
+                        href="lotterpro.com ">lotterpro.com</a> é um domínio
+                    operado por Extra Level Gaming B.V, registrada na Camara de comércio de Curacao, sob o número 166155
+                    e regida pelas leis de Curacao, com endereço e sede em Schottegatweg Oost 10 Unit 1-9, Bon Bini
+                    Business Center, Curaçao.</span>
+            </div>
+            <div class="d-flex flex-column">
+                <div>
+                    <img class="rounded-circle" src="https://lotterpro.com/img/lgpd.jpg" width="100px" alt="">
+                    <img class="rounded-circle" src="https://lotterpro.com/img/esg.jpg" width="100px" alt="">
+                    <img class="rounded-circle" src="https://lotterpro.com/img/cyber_seguranca.jpg" width="100px"
+                        alt="">
+                </div>
+                <div>
+                    <img src="https://lotterpro.com/img/frist_data_certificate.png" width="100px" alt="">
+                    <img src="https://verification.curacao-egaming.com/validate.ashx?domain=lotterpro.com" width="100px"
+                        alt="">
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-md-row flex-column-reverse">
+            <div class="d-flex politicas flex-column justify-content-center p-4 ">
+                <h1 class="textpoliticas">Politicas</h1>
+                <a href="">Politica de AML</a>
+                <a href="">Política de Verificação de Identidade</a>
+                <a href="">Política de Auto Exclusão</a>
+                <a href="">Política de Jogo Responsável</a>
+                <a href="">Política de jogos para menores (cláusula de 18+ para jogar)</a>
+                <a href="">Termos e Condições</a>
+
+            </div>
+
+            <div class="d-flex flex-row flex-md-column align-items-center justify-content-center p-4 ">
+                <svg class="d-md-none mr-5" style="padding-bottom: 30px" width="250px" viewBox="0 0 24 24" id="Layer_1" width="150" data-name="Layer 1"
+                    xmlns="http://www.w3.org/2000/svg" fill="#f3e2e2" stroke="#f3e2e2">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: none;
+                                    stroke: #ff0000;
+                                    stroke-miterlimit: 10;
+                                    stroke-width: 1.91px;
+                                }
+                            </style>
+                        </defs>
+                        <path class="cls-1" d="M19.45,19.42a10.5,10.5,0,1,1,0-14.84"></path>
+                        <rect class="cls-1" x="11.07" y="8.18" width="4.77" height="3.82" rx="1.91"></rect>
+                        <rect class="cls-1" x="11.07" y="12" width="4.77" height="3.82" rx="1.91"></rect>
+                        <line class="cls-1" x1="7.25" y1="7.23" x2="7.25" y2="15.82"></line>
+                        <line class="cls-1" x1="5.34" y1="15.82" x2="9.16" y2="15.82"></line>
+                        <line class="cls-1" x1="5.34" y1="9.14" x2="8.2" y2="9.14"></line>
+                        <line class="cls-1" x1="17.75" y1="12" x2="23.48" y2="12"></line>
+                        <line class="cls-1" x1="20.61" y1="9.14" x2="20.61" y2="14.86"></line>
+                    </g>
                 </svg>
-            </a>
-            <a href="" aria-label="Ver nossa página no twitter" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512">
-                    <path
-                        d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-                        fill="currentColor"></path>
-                </svg></a>
-            <a href="" aria-label="Ver nossa página no instagram" target="_blank"><svg
-                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path
-                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-                        fill="currentColor"></path>
-                </svg></a> <a href="" aria-label="Ver nosso canal no youtube" target="_blank"><svg
-                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                    <path
-                        d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
-                        fill="currentColor"></path>
-                </svg></a> <a href="" aria-label="Ver nossa página no tiktok" target="_blank"><svg
-                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path
-                        d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
-                        fill="currentColor"></path>
-                </svg></a>
+                <svg class="d-md-block d-none" style="padding-bottom: 30px" viewBox="0 0 24 24" id="Layer_1" width="150" data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg" fill="#f3e2e2" stroke="#f3e2e2">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: none;
+                                stroke: #ff0000;
+                                stroke-miterlimit: 10;
+                                stroke-width: 1.91px;
+                            }
+                        </style>
+                    </defs>
+                    <path class="cls-1" d="M19.45,19.42a10.5,10.5,0,1,1,0-14.84"></path>
+                    <rect class="cls-1" x="11.07" y="8.18" width="4.77" height="3.82" rx="1.91"></rect>
+                    <rect class="cls-1" x="11.07" y="12" width="4.77" height="3.82" rx="1.91"></rect>
+                    <line class="cls-1" x1="7.25" y1="7.23" x2="7.25" y2="15.82"></line>
+                    <line class="cls-1" x1="5.34" y1="15.82" x2="9.16" y2="15.82"></line>
+                    <line class="cls-1" x1="5.34" y1="9.14" x2="8.2" y2="9.14"></line>
+                    <line class="cls-1" x1="17.75" y1="12" x2="23.48" y2="12"></line>
+                    <line class="cls-1" x1="20.61" y1="9.14" x2="20.61" y2="14.86"></line>
+                </g>
+            </svg>
+                <div class="">
+                    <h1 class="text18"> 1. Este produto é para uso de usuários maiores de 18 anos e é destinado apenas
+                        para
+                        fins de entretenimento.<br><br>
+                        2. Este site contém compras no app.<br><br>
+                        3. O fato de um jogador jogar ou ganhar em um jogo de apostas sociais não significa que ele
+                        ganhará
+                        em
+                        apostas com dinheiro real e jogos relacionados no futuro.</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="d-flex justify-content-between align-items-center" style="padding:0px 50px;">
+        <div class="d-flex justify-content-center align-items-center">
+            <p class="mr-4" style="margin: 0">Suporte:</p>
+            <span>contact@lotterpro.com</span>
+        </div>
+        <div>
+
+
+            <li class="mb-1 d-flex flex-row gap-2 flex-md-row flex-column justify-content-start align-items-center"><a
+                    class="p-3 rounded text-secondary d-flex align-items-center gap-2"
+                    href="https://t.me/+ndgVQ-A6ofIzMWQx" target="_blank" rel="noreferrer"><i
+                        class="fab fa-telegram fa-2x mr-2"></i> PT</a><a
+                    class="p-3 rounded text-secondary d-flex align-items-center gap-2"
+                    href="https://t.me/+uiUCg-ezR6c4YWVh" target="_blank" rel="noreferrer"><i
+                        class="fab fa-telegram fa-2x mr-2"></i> ES</a><a
+                    class="p-3 rounded text-secondary d-flex align-items-center gap-2"
+                    href="https://t.me/+1vX2OMK9Yrs0ZjQx" target="_blank" rel="noreferrer"><i
+                        class="fab fa-telegram fa-2x mr-2"></i> EN</a></li>
         </div>
     </div>
-    </div>
+
 </footer>
 
 
@@ -64,7 +140,7 @@
 
     .iconss a {
         margin-right: 3px;
-        color: #A3D712;
+        color: #ffe400;
         align-items: center;
         justify-content: center;
         display: flex;
@@ -75,7 +151,7 @@
     }
 
     .iconss a:hover {
-        background: #A3D712;
+        background: #ffe400;
         color: #212425;
     }
 

@@ -22,7 +22,7 @@
             @endif
             <div class="login-logo mt-md-5">
 
-                <img src="{{ App\Helper\Configs::getConfigLogo() }}" alt="" width="150" height="150">
+                <img src="" alt="" width="150" height="150">
 
             </div>
             <div class="col-md-12 px-4">
@@ -48,7 +48,7 @@
                 </div>
                 @enderror
             </div>
-            <h3 class="login-box-msg" style="color:#A3D712">Faça seu cadastro</h3>
+            <h3 class="login-box-msg" style="color:#ffe400">Faça seu cadastro</h3>
 
             <form method="POST" action="{{ route('register') }}">
                 @csrf
